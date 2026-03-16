@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Git desde Cero - Guía Completa</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <span class="logo-icon">📦</span>
+                    <span class="logo-text">Git desde Cero</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#que-es">¿Qué es?</a></li>
+                    <li><a href="#arquitectura">Arquitectura</a></li>
+                    <li><a href="#temas">Temas</a></li>
+                    <li><a href="#ejemplos">Ejemplos</a></li>
+                </ul>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h1>Git desde Cero</h1>
+            <p class="hero-subtitle">Guía completa para aprender Git desde fundamentos hasta conceptos avanzados.</p>
+            <div class="hero-buttons">
+                <a href="#que-es" class="btn btn-primary">Comenzar</a>
+                <a href="#ejemplos" class="btn btn-secondary">Ver ejemplos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ¿Qué es Git? -->
+    <section id="que-es" class="section">
+        <div class="container">
+            <h2>¿Qué es Git?</h2>
+            <div class="content-grid">
+                <div class="content-card">
+                    <div class="card-icon">📦</div>
+                    <h3>Sistema de Control de Versiones</h3>
+                    <p>Git es un sistema de control de versiones distribuido que permite rastrear cambios en el código fuente durante el desarrollo de software.</p>
+                </div>
+                <div class="content-card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Para Qué Sirve</h3>
+                    <p>Controlar versiones de código, colaborar en equipo, mantener historial de cambios, experimentar con ramas y revertir errores.</p>
+                </div>
+                <div class="content-card">
+                    <div class="card-icon">🔧</div>
+                    <h3>Características Principales</h3>
+                    <p>Distribuido, rápido, branching eficiente, merge potente, staging area, y soporte para workflows distribuidos.</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h4>💡 ¿Sabías qué?</h4>
+                <p>Git fue creado por Linus Torvalds en 2005 para el desarrollo del kernel de Linux. Su nombre significa "persona desagradable" en inglés británico coloquial.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Arquitectura -->
+    <section id="arquitectura" class="section section-alt">
+        <div class="container">
+            <h2>Arquitectura de Git</h2>
+            <p class="section-intro">Git utiliza un modelo de tres árboles (Working Directory, Staging Area, Repository) para gestionar los cambios.</p>
+
+            <div class="architecture-diagram">
+                <div class="arch-layer">
+                    <h4>Working Directory</h4>
+                    <p>Tus archivos de trabajo</p>
+                </div>
+                <div class="arch-arrow">⬇️ git add</div>
+                <div class="arch-layer">
+                    <h4>Staging Area (Index)</h4>
+                    <p>Archivos preparados para commit</p>
+                </div>
+                <div class="arch-arrow">⬇️ git commit</div>
+                <div class="arch-layer">
+                    <h4>Local Repository</h4>
+                    <p>Historial de commits (.git)</p>
+                </div>
+                <div class="arch-arrow">⬇️ git push</div>
+                <div class="arch-layer">
+                    <h4>Remote Repository</h4>
+                    <p>Repositorio remoto (GitHub, GitLab)</p>
+                </div>
+            </div>
+
+            <div class="components-grid">
+                <div class="component-card">
+                    <h4>📊 Conceptos Clave</h4>
+                    <ul>
+                        <li>Commit - Instantánea de cambios</li>
+                        <li>Branch - Línea de desarrollo</li>
+                        <li>Merge - Combinar ramas</li>
+                        <li>Remote - Repositorio remoto</li>
+                    </ul>
+                </div>
+                <div class="component-card">
+                    <h4>💾 Comandos Esenciales</h4>
+                    <ul>
+                        <li>git init - Inicializar repositorio</li>
+                        <li>git clone - Clonar repositorio</li>
+                        <li>git commit - Guardar cambios</li>
+                        <li>git push/pull - Sincronizar remoto</li>
+                    </ul>
+                </div>
+                <div class="component-card">
+                    <h4>🔒 Workflows Populares</h4>
+                    <ul>
+                        <li>Git Flow - Flujo tradicional</li>
+                        <li>GitHub Flow - Flujo simplificado</li>
+                        <li>Trunk-Based - Desarrollo continuo</li>
+                        <li>Feature Branch - Por funcionalidad</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Temas -->
+    <section id="temas" class="section">
+        <div class="container">
+            <h2>Contenido del Curso</h2>
+            <div class="topics-grid">
+                <div class="topic-card" data-topic="1">
+                    <div class="topic-number">01</div>
+                    <h3>Introducción</h3>
+                    <p>Historia de Git, conceptos de control de versiones y configuración inicial.</p>
+                    <a href="#" class="topic-link">Ver tema →</a>
+                </div>
+                <div class="topic-card" data-topic="2">
+                    <div class="topic-number">02</div>
+                    <h3>Instalación</h3>
+                    <p>Instalación de Git en Windows, Mac y Linux. Configuración de usuario.</p>
+                    <a href="#" class="topic-link">Ver tema →</a>
+                </div>
+                <div class="topic-card" data-topic="3">
+                    <div class="topic-number">03</div>
+                    <h3>Conceptos básicos</h3>
+                    <p>Repositorios, commits, staging area y comandos fundamentales.</p>
+                    <a href="#" class="topic-link">Ver tema →</a>
+                </div>
+                <div class="topic-card" data-topic="4">
+                    <div class="topic-number">04</div>
+                    <h3>Ejemplos prácticos</h3>
+                    <p>Branching, merging, resolución de conflictos y trabajo colaborativo.</p>
+                    <a href="#" class="topic-link">Ver tema →</a>
+                </div>
+                <div class="topic-card" data-topic="5">
+                    <div class="topic-number">05</div>
+                    <h3>Buenas prácticas</h3>
+                    <p>Mensajes de commit, convenciones, hooks y optimización del workflow.</p>
+                    <a href="#" class="topic-link">Ver tema →</a>
+                </div>
+                <div class="topic-card" data-topic="6">
+                    <div class="topic-number">06</div>
+                    <h3>Casos reales</h3>
+                    <p>Git Flow, GitHub Flow, CI/CD y integración con plataformas.</p>
+                    <a href="#" class="topic-link">Ver tema →</a>
+                </div>
+                <div class="topic-card" data-topic="7">
+                    <div class="topic-number">07</div>
+                    <h3>Proyecto final</h3>
+                    <p>Workflow completo de desarrollo colaborativo con Git.</p>
+                    <a href="#" class="topic-link">Ver tema →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ejemplos -->
+    <section id="ejemplos" class="section section-alt">
+        <div class="container">
+            <h2>Ejemplos de Código</h2>
+            <div class="examples-container">
+                <div class="example-card">
+                    <h4>Inicializar Repositorio</h4>
+                    <pre><code class="language-bash"># Inicializar nuevo repositorio
+git init
+
+# Clonar repositorio existente
+git clone https://github.com/usuario/repo.git
+
+# Ver estado del repositorio
+git status</code></pre>
+                </div>
+                <div class="example-card">
+                    <h4>Commits Básicos</h4>
+                    <pre><code class="language-bash"># Agregar archivos al staging
+git add archivo.txt
+git add .
+
+# Crear commit
+git commit -m "Mensaje descriptivo"
+
+# Ver historial
+git log --oneline</code></pre>
+                </div>
+                <div class="example-card">
+                    <h4>Branches y Merge</h4>
+                    <pre><code class="language-bash"># Crear rama
+git branch feature-nueva
+
+# Cambiar de rama
+git checkout feature-nueva
+
+# Crear y cambiar
+git checkout -b feature-nueva
+
+# Mergear
+git merge feature-nueva</code></pre>
+                </div>
+                <div class="example-card">
+                    <h4>Trabajo Remoto</h4>
+                    <pre><code class="language-bash"># Agregar remoto
+git remote add origin url
+
+# Push a remoto
+git push origin main
+
+# Pull de remoto
+git pull origin main</code></pre>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="#" class="btn btn-primary">Ver más ejemplos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Git desde Cero</h4>
+                    <p>Guía educativa completa para aprender Git desde los fundamentos hasta conceptos avanzados.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#que-es">¿Qué es?</a></li>
+                        <li><a href="#temas">Temas</a></li>
+                        <li><a href="#ejemplos">Ejemplos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="https://git-scm.com/doc" target="_blank">Docs Oficiales</a></li>
+                        <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>👨‍💻 Desarrollado por <strong>Isaac Esteban Haro Torres</strong></p>
+                <p class="developer-info">Ingeniero en Sistemas · Full Stack · Automatización · Data</p>
+                <div class="developer-contact">
+                    <p>📧 Email: <a href="mailto:zackharo1@gmail.com">zackharo1@gmail.com</a></p>
+                    <p>💻 GitHub: <a href="https://github.com/ieharo1" target="_blank">github.com/ieharo1</a></p>
+                </div>
+                <p class="copyright">© 2026 Isaac Esteban Haro Torres - Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
