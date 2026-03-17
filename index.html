@@ -142,43 +142,212 @@
                     <div class="topic-number">01</div>
                     <h3>Introducción</h3>
                     <p>Historia de Git, conceptos de control de versiones y configuración inicial.</p>
-                    <a href="#" class="topic-link">Ver tema →</a>
+                    <a href="#tema1-1" class="topic-link">Ver tema →</a>
                 </div>
                 <div class="topic-card" data-topic="2">
                     <div class="topic-number">02</div>
                     <h3>Instalación</h3>
                     <p>Instalación de Git en Windows, Mac y Linux. Configuración de usuario.</p>
-                    <a href="#" class="topic-link">Ver tema →</a>
+                    <a href="#tema1-2" class="topic-link">Ver tema →</a>
                 </div>
                 <div class="topic-card" data-topic="3">
                     <div class="topic-number">03</div>
                     <h3>Conceptos básicos</h3>
                     <p>Repositorios, commits, staging area y comandos fundamentales.</p>
-                    <a href="#" class="topic-link">Ver tema →</a>
+                    <a href="#tema1-3" class="topic-link">Ver tema →</a>
                 </div>
                 <div class="topic-card" data-topic="4">
                     <div class="topic-number">04</div>
                     <h3>Ejemplos prácticos</h3>
                     <p>Branching, merging, resolución de conflictos y trabajo colaborativo.</p>
-                    <a href="#" class="topic-link">Ver tema →</a>
+                    <a href="#tema2-1" class="topic-link">Ver tema →</a>
                 </div>
                 <div class="topic-card" data-topic="5">
                     <div class="topic-number">05</div>
                     <h3>Buenas prácticas</h3>
                     <p>Mensajes de commit, convenciones, hooks y optimización del workflow.</p>
-                    <a href="#" class="topic-link">Ver tema →</a>
+                    <a href="#tema2-2" class="topic-link">Ver tema →</a>
                 </div>
                 <div class="topic-card" data-topic="6">
                     <div class="topic-number">06</div>
                     <h3>Casos reales</h3>
                     <p>Git Flow, GitHub Flow, CI/CD y integración con plataformas.</p>
-                    <a href="#" class="topic-link">Ver tema →</a>
+                    <a href="#tema3-1" class="topic-link">Ver tema →</a>
                 </div>
                 <div class="topic-card" data-topic="7">
                     <div class="topic-number">07</div>
                     <h3>Proyecto final</h3>
                     <p>Workflow completo de desarrollo colaborativo con Git.</p>
-                    <a href="#" class="topic-link">Ver tema →</a>
+                    <a href="#tema3-2" class="topic-link">Ver tema →</a>
+                </div>
+            </div>
+
+            <!-- Contenido Detallado de Temas -->
+            <div class="topic-content-container">
+                <div class="content-detail" id="tema1-1">
+                    <h3>📌 Introducción a Git</h3>
+                    <div class="content-body">
+                        <p><strong>Git</strong> es un sistema de control de versiones distribuido que permite rastrear cambios en el código fuente durante el desarrollo de software.</p>
+                        <h4>Historia:</h4>
+                        <p>Git fue creado por Linus Torvalds en 2005 para el desarrollo del kernel de Linux. Su nombre significa "persona desagradable" en inglés británico coloquial.</p>
+                        <h4>Conceptos Fundamentales:</h4>
+                        <ul>
+                            <li><strong>Repositorio:</strong> Directorio donde Git almacena todos los archivos y el historial</li>
+                            <li><strong>Commit:</strong> Instantánea de cambios en un momento específico</li>
+                            <li><strong>Branch:</strong> Línea de desarrollo independiente</li>
+                            <li><strong>Merge:</strong> Combinar cambios de diferentes ramas</li>
+                        </ul>
+                        <div class="info-box">
+                            <strong>💡 ¿Sabías qué?</strong>
+                            <p>Git es distribuido, lo que significa que cada desarrollador tiene una copia completa del repositorio, incluyendo todo el historial.</p>
+                        </div>
+                    </div>
+                    <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                </div>
+
+                <div class="content-detail" id="tema1-2">
+                    <h3>🔧 Instalación de Git</h3>
+                    <div class="content-body">
+                        <h4>En Windows:</h4>
+                        <ol>
+                            <li>Descarga Git desde git-scm.com</li>
+                            <li>Ejecuta el instalador</li>
+                            <li>Selecciona las opciones por defecto</li>
+                            <li>Click en Finish</li>
+                        </ol>
+                        <h4>En macOS:</h4>
+                        <pre><code>brew install git</code></pre>
+                        <h4>En Linux:</h4>
+                        <pre><code>sudo apt-get install git  # Debian/Ubuntu
+sudo yum install git     # CentOS/RHEL</code></pre>
+                        <h4>Configuración inicial:</h4>
+                        <pre><code>git config --global user.name "Tu Nombre"
+git config --global user.email "tu@email.com"
+git config --global init.defaultBranch main</code></pre>
+                    </div>
+                    <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                </div>
+
+                <div class="content-detail" id="tema1-3">
+                    <h3>📦 Conceptos Básicos</h3>
+                    <div class="content-body">
+                        <h4>Los Tres Árboles de Git:</h4>
+                        <ul>
+                            <li><strong>Working Directory:</strong> Tus archivos de trabajo actuales</li>
+                            <li><strong>Staging Area (Index):</strong> Área donde preparas los cambios para commit</li>
+                            <li><strong>Repository (.git):</strong> Donde Git almacena todos los commits</li>
+                        </ul>
+                        <h4>Comandos Fundamentales:</h4>
+                        <pre><code># Inicializar repositorio
+git init
+
+# Clonar repositorio
+git clone https://github.com/usuario/repo.git
+
+# Ver estado
+git status
+
+# Agregar archivos al staging
+git add archivo.txt
+git add .  # Todos los archivos
+
+# Crear commit
+git commit -m "Mensaje descriptivo"</code></pre>
+                    </div>
+                    <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                </div>
+
+                <div class="content-detail" id="tema2-1">
+                    <h3>🌿 Branching y Merging</h3>
+                    <div class="content-body">
+                        <h4>Trabajar con Ramas:</h4>
+                        <pre><code># Ver ramas existentes
+git branch
+
+# Crear nueva rama
+git branch feature-nueva
+
+# Cambiar de rama
+git checkout feature-nueva
+
+# Crear y cambiar en un solo comando
+git checkout -b feature-nueva
+
+# Volver a main
+git checkout main</code></pre>
+                        <h4>Merge (Combinar Ramas):</h4>
+                        <pre><code># Estando en main, mergear feature-nueva
+git checkout main
+git merge feature-nueva
+
+# Eliminar rama después del merge
+git branch -d feature-nueva</code></pre>
+                        <h4>Resolución de Conflictos:</h4>
+                        <p>Cuando Git no puede mergear automáticamente, debes editar los archivos marcados con conflictos y luego hacer commit.</p>
+                    </div>
+                    <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                </div>
+
+                <div class="content-detail" id="tema2-2">
+                    <h3>✅ Buenas Prácticas</h3>
+                    <div class="content-body">
+                        <h4>Mensajes de Commit:</h4>
+                        <ul>
+                            <li>Usa el modo imperativo ("Add feature" no "Added feature")</li>
+                            <li>Sé conciso pero descriptivo (máximo 50 caracteres en el asunto)</li>
+                            <li>Explica el qué y el por qué, no el cómo</li>
+                        </ul>
+                        <h4>Convención de Ramas:</h4>
+                        <pre><code>main              # Rama principal de producción
+develop         # Rama de desarrollo
+feature/xxx     # Nuevas funcionalidades
+bugfix/xxx      # Corrección de bugs
+hotfix/xxx      # Correcciones urgentes
+release/x.y     # Preparación de releases</code></pre>
+                        <h4>Git Hooks:</h4>
+                        <p>Scripts que se ejecutan automáticamente en ciertos eventos (pre-commit, post-merge, etc.).</p>
+                    </div>
+                    <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                </div>
+
+                <div class="content-detail" id="tema3-1">
+                    <h3>🚀 Casos Reales</h3>
+                    <div class="content-body">
+                        <h4>Git Flow:</h4>
+                        <p>Workflow tradicional con ramas main, develop, feature, release y hotfix.</p>
+                        <h4>GitHub Flow:</h4>
+                        <ul>
+                            <li>Crear rama desde main</li>
+                            <li>Hacer commits</li>
+                            <li>Abrir Pull Request</li>
+                            <li>Code review y discusión</li>
+                            <li>Merge a main</li>
+                        </ul>
+                        <h4>CI/CD con Git:</h4>
+                        <p>Integración continua que ejecuta tests automáticamente en cada push. GitHub Actions, GitLab CI, Jenkins.</p>
+                    </div>
+                    <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                </div>
+
+                <div class="content-detail" id="tema3-2">
+                    <h3>📋 Proyecto Final</h3>
+                    <div class="content-body">
+                        <p>Desarrolla un proyecto completo aplicando todo lo aprendido:</p>
+                        <ol>
+                            <li>Inicializar repositorio Git</li>
+                            <li>Crear rama develop</li>
+                            <li>Crear ramas feature para cada funcionalidad</li>
+                            <li>Hacer commits descriptivos</li>
+                            <li>Mergear a develop</li>
+                            <li>Crear Pull Request a main</li>
+                            <li>Code review y merge final</li>
+                        </ol>
+                        <div class="info-box">
+                            <strong>💡 Proyecto sugerido:</strong>
+                            <p>Crea un repositorio con un proyecto real, aplicando Git Flow, commits semánticos y Pull Requests.</p>
+                        </div>
+                    </div>
+                    <a href="#temas" class="btn btn-back">← Volver a temas</a>
                 </div>
             </div>
         </div>
