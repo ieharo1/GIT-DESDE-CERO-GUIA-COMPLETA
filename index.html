@@ -134,56 +134,57 @@
     </section>
 
     <!-- Temas -->
-    <section id="temas" class="section">
+    <section id="temas" class="topics">
         <div class="container">
-            <h2>Contenido del Curso</h2>
+            <h2>📖 Temas del Curso</h2>
+            <p class="topics-intro">Haz clic en cualquier tema para ver el contenido detallado</p>
+            
             <div class="topics-grid">
-                <div class="topic-card" data-topic="1">
-                    <div class="topic-number">01</div>
-                    <h3>Introducción</h3>
-                    <p>Historia de Git, conceptos de control de versiones y configuración inicial.</p>
-                    <a href="#tema1-1" class="topic-link">Ver tema →</a>
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <span class="topic-icon">📌</span>
+                        <h3>Módulo 1: Fundamentos</h3>
+                    </div>
+                    <ul class="topic-list">
+                        <li><a href="#tema1-1">Introducción a Git</a></li>
+                        <li><a href="#tema1-2">Instalación de Git</a></li>
+                        <li><a href="#tema1-3">Conceptos básicos</a></li>
+                        <li><a href="#tema1-4">Repositorios y Commits</a></li>
+                    </ul>
+                    <a href="#tema1-1" class="btn-topic">Ver tema →</a>
                 </div>
-                <div class="topic-card" data-topic="2">
-                    <div class="topic-number">02</div>
-                    <h3>Instalación</h3>
-                    <p>Instalación de Git en Windows, Mac y Linux. Configuración de usuario.</p>
-                    <a href="#tema1-2" class="topic-link">Ver tema →</a>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <span class="topic-icon">⚙️</span>
+                        <h3>Módulo 2: Intermedio</h3>
+                    </div>
+                    <ul class="topic-list">
+                        <li><a href="#tema2-1">Ejemplos prácticos</a></li>
+                        <li><a href="#tema2-2">Buenas prácticas</a></li>
+                        <li><a href="#tema2-3">Branching y Merging</a></li>
+                        <li><a href="#tema2-4">Resolución de Conflictos</a></li>
+                    </ul>
+                    <a href="#tema2-1" class="btn-topic">Ver tema →</a>
                 </div>
-                <div class="topic-card" data-topic="3">
-                    <div class="topic-number">03</div>
-                    <h3>Conceptos básicos</h3>
-                    <p>Repositorios, commits, staging area y comandos fundamentales.</p>
-                    <a href="#tema1-3" class="topic-link">Ver tema →</a>
-                </div>
-                <div class="topic-card" data-topic="4">
-                    <div class="topic-number">04</div>
-                    <h3>Ejemplos prácticos</h3>
-                    <p>Branching, merging, resolución de conflictos y trabajo colaborativo.</p>
-                    <a href="#tema2-1" class="topic-link">Ver tema →</a>
-                </div>
-                <div class="topic-card" data-topic="5">
-                    <div class="topic-number">05</div>
-                    <h3>Buenas prácticas</h3>
-                    <p>Mensajes de commit, convenciones, hooks y optimización del workflow.</p>
-                    <a href="#tema2-2" class="topic-link">Ver tema →</a>
-                </div>
-                <div class="topic-card" data-topic="6">
-                    <div class="topic-number">06</div>
-                    <h3>Casos reales</h3>
-                    <p>Git Flow, GitHub Flow, CI/CD y integración con plataformas.</p>
-                    <a href="#tema3-1" class="topic-link">Ver tema →</a>
-                </div>
-                <div class="topic-card" data-topic="7">
-                    <div class="topic-number">07</div>
-                    <h3>Proyecto final</h3>
-                    <p>Workflow completo de desarrollo colaborativo con Git.</p>
-                    <a href="#tema3-2" class="topic-link">Ver tema →</a>
+
+                <div class="topic-card">
+                    <div class="topic-header">
+                        <span class="topic-icon">🚀</span>
+                        <h3>Módulo 3: Avanzado</h3>
+                    </div>
+                    <ul class="topic-list">
+                        <li><a href="#tema3-1">Casos reales</a></li>
+                        <li><a href="#tema3-2">Proyecto final</a></li>
+                        <li><a href="#tema3-3">Git Avanzado</a></li>
+                        <li><a href="#tema3-4">Git Workflows</a></li>
+                    </ul>
+                    <a href="#tema3-1" class="btn-topic">Ver tema →</a>
                 </div>
             </div>
 
             <!-- Contenido Detallado de Temas -->
-            <div class="topic-content-container">
+            <div class="topic-content">
                 <div class="content-detail" id="tema1-1">
                     <h3>📌 Introducción a Git</h3>
                     <div class="content-body">
@@ -349,6 +350,152 @@ release/x.y     # Preparación de releases</code></pre>
                     </div>
                     <a href="#temas" class="btn btn-back">← Volver a temas</a>
                 </div>
+                <div class="content-detail" id="tema1-4">
+                    <h3>🔀 Ramas y Tags</h3>
+                    <div class="content-body">
+                        <h4>Gestión Avanzada de Ramas:</h4>
+                        <pre><code># Renombrar rama
+git branch -m nombre_viejo nombre_nuevo
+
+# Eliminar rama local
+git branch -d nombre_rama
+
+# Eliminar rama remota
+git push origin --delete nombre_rama
+
+# Ver ramas remotas
+git branch -r
+
+# Actualizar ramas remotely
+git fetch --all</code></pre>
+                        <h4>Tags (Versiones):</h4>
+                        <pre><code># Crear tag
+git tag v1.0.0
+
+# Tag con anotación
+git tag -a v1.0.0 -m "Versión 1.0.0"
+
+# Ver tags
+git tag -l
+
+# Subir tags
+git push origin --tags</code></pre>
+                        <h4>Ramas Huérfanas:</h4>
+                        <pre><code>git checkout --orphan gh-pages
+git rm -rf .
+# Agregar archivos para GitHub Pages</code></pre>
+                    </div>
+                    <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                </div>
+
+                <div class="content-detail" id="tema2-3">
+                    <h3>🔄 Git Stash y Rebase</h3>
+                    <div class="content-body">
+                        <h4>Git Stash (Guardar cambios temporales):</h4>
+                        <pre><code># Guardar cambios
+git stash
+
+# Guardar con mensaje
+git stash push -m "Trabajo en progreso"
+
+# Ver stashes
+git stash list
+
+# Aplicar último stash
+git stash apply
+
+# Aplicar y eliminar
+git stash pop
+
+# Eliminar stash
+git stash drop</code></pre>
+                        <h4>Rebase (Reescribir historial):</h4>
+                        <pre><code># Rebase interactivo
+git rebase -i HEAD~3
+
+# Rebase onto
+git rebase main feature
+
+# Continuar después de resolver conflictos
+git rebase --continue
+
+# Abortar rebase
+git rebase --abort</code></pre>
+                        <h4>Cherry-pick:</h4>
+                        <pre><code>git cherry-pick commit-hash</code></pre>
+                    </div>
+                    <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                </div>
+
+                <div class="content-detail" id="tema2-4">
+                    <h3>🔍 Git Log y Debugging</h3>
+                    <div class="content-body">
+                        <h4>Git Log Avanzado:</h4>
+                        <pre><code>git log --oneline              # Formato corto
+git log --graph --oneline --all  # Con ramas
+git log -p archivo.txt       # Historial de archivo
+git log --author="Juan"      # Filtrar por autor
+git log --since="2 weeks ago" # Filtrar por fecha</code></pre>
+                        <h4>Blame y Bisect:</h4>
+                        <pre><code>git blame archivo.txt         # Quién modificó cada línea
+git bisect start             # Iniciar búsqueda binaria
+git bisect bad               # Marcar como defectuoso
+git bisect good v1.0.0       # Marcar como correcto
+git bisect reset             # Terminar búsqueda</code></pre>
+                        <h4>Buscar en Commits:</h4>
+                        <pre><code>git log --grep="fix"         # Buscar en mensajes
+git show commit-hash         # Ver commit específico</code></pre>
+                    </div>
+                    <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                </div>
+
+                <div class="content-detail" id="tema3-3">
+                    <h3>🔧 Git Hooks y Personalización</h3>
+                    <div class="content-body">
+                        <h4>Git Hooks:</h4>
+                        <pre><code># .git/hooks/pre-commit
+#!/bin/bash
+npm test
+if [ $? -ne 0 ]; then
+    echo "Tests fallidos, no se puede hacer commit"
+    exit 1
+fi</code></pre>
+                        <h4>Aliases:</h4>
+                        <pre><code>git config --global alias.st status
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.lg "log --oneline --graph --all"</code></pre>
+                        <h4>Configuraciones Útiles:</h4>
+                        <pre><code>git config --global core.editor vim
+git config --global pull.rebase false
+git config --global push.default current</code></pre>
+                    </div>
+                    <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                </div>
+
+                <div class="content-detail" id="tema3-4">
+                    <h3>📱 Git en Equipos y Workflows</h3>
+                    <div class="content-body">
+                        <h4>Workflows Populares:</h4>
+                        <ul>
+                            <li><strong>Git Flow:</strong> main, develop, features, releases, hotfix</li>
+                            <li><strong>GitHub Flow:</strong> main → feature → PR → merge</li>
+                            <li><strong>Trunk-Based:</strong> Commits pequeños a main</li>
+                        </ul>
+                        <h4>Code Review:</h4>
+                        <pre><code>git request-pull origin/main my-branch</code></pre>
+                        <h4>Trabajo en Equipo:</h4>
+                        <pre><code>git fetch origin
+git rebase origin/main
+git push --force-with-lease  # Nunca --force</code></pre>
+                        <h4>Semver (Versionado Semántico):</h4>
+                        <pre><code>major.minor.patch (1.2.3)
+- 1.0.0 → 2.0.0 (Breaking changes)
+- 1.0.0 → 1.1.0 (Nuevas features)
+- 1.0.0 → 1.0.1 (Bug fixes)</code></pre>
+                    </div>
+                    <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                </div>
             </div>
         </div>
     </section>
@@ -413,40 +560,23 @@ git pull origin main</code></pre>
         </div>
     </section>
 
-    <!-- Footer -->
+        <section id="contacto" class="contact">
+            <div class="container">
+                <h2>👨‍💻 Desarrollado por Isaac Esteban Haro Torres</h2>
+                <p class="contact-title">Ingeniero en Sistemas · Full Stack · Automatización · Data</p>
+                <div class="contact-info">
+                    <p>📧 Email: <a href="mailto:zackharo1@gmail.com">zackharo1@gmail.com</a></p>
+                    <p>📱 WhatsApp: 098805517</p>
+                    <p>💻 GitHub: <a href="https://github.com/ieharo1" target="_blank">github.com/ieharo1</a></p>
+                    <p>🌐 Portafolio: <a href="https://ieharo1.github.io/portafolio-isaac.haro/" target="_blank">ieharo1.github.io/portafolio-isaac.haro/</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer class="footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>Git desde Cero</h4>
-                    <p>Guía educativa completa para aprender Git desde los fundamentos hasta conceptos avanzados.</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Enlaces Rápidos</h4>
-                    <ul>
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#que-es">¿Qué es?</a></li>
-                        <li><a href="#temas">Temas</a></li>
-                        <li><a href="#ejemplos">Ejemplos</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Recursos</h4>
-                    <ul>
-                        <li><a href="https://git-scm.com/doc" target="_blank">Docs Oficiales</a></li>
-                        <li><a href="https://github.com/" target="_blank">GitHub</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>👨‍💻 Desarrollado por <strong>Isaac Esteban Haro Torres</strong></p>
-                <p class="developer-info">Ingeniero en Sistemas · Full Stack · Automatización · Data</p>
-                <div class="developer-contact">
-                    <p>📧 Email: <a href="mailto:zackharo1@gmail.com">zackharo1@gmail.com</a></p>
-                    <p>💻 GitHub: <a href="https://github.com/ieharo1" target="_blank">github.com/ieharo1</a></p>
-                </div>
-                <p class="copyright">© 2026 Isaac Esteban Haro Torres - Todos los derechos reservados.</p>
-            </div>
+            <p>&copy; 2026 Isaac Esteban Haro Torres - Todos los derechos reservados.</p>
         </div>
     </footer>
 
